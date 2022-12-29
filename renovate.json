@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "regexManagers": [
+    {
+      "fileMatch": [
+        ".circleci/config.yml"
+      ],
+      "matchStringsStrategy": "combination",
+      "matchStrings": [
+        "node_version:",
+        "type: string",
+        "default: (?<currentValue>[0-9.]+\\.[0-9.]+\\.[0-9.]+)"
+      ],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "docker"
+    }
+  ]
+}

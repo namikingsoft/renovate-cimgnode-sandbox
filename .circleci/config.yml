@@ -1,0 +1,25 @@
+version: 2.1
+
+parameters:
+  node_version:
+    type: string
+    default: 16.17.0
+    description: CI コンテナの Node.js バージョンを指定
+
+executors:
+  default:
+    docker:
+      - image: cimg/node:<< pipeline.parameters.node_version >>
+
+jobs:
+  build:
+    executor: default
+    steps:
+      - checkout
+
+workflows:
+  version: 2
+
+  ci:
+    jobs:
+      - build
