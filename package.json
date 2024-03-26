@@ -1,7 +1,7 @@
 {
   "name": "renovate-cimgnode-sandbox",
   "engines": {
-    "node": "18.11.0"
+    "node": "20.12.0"
   },
   "version": "0.0.0",
   "description": "",
